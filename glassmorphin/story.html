@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <div class="bg"></div>
+    <div class="page">
+        <img style="position: fixed; left: 550px;" src="GOH.png" alt="">
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">overview</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="story.html">story</a></li>
+                <li><a href="extra.html">extra</a></li>
+            </ul>
+        </div>
+        <div id="scrollSection">
+            <div id="content">
+                <p class="scroll-item">
+                    Jin Mori is the main protagonist in "The God of High School," a South Korean webtoon series created
+                    by
+                    Yongje Park. His character has a rich and complex background.
+                </p>
+                <p class="scroll-item">
+                    <b>Background:</b>
+                    Jin Mori is initially introduced as a high school student living a seemingly ordinary life. However,
+                    his
+                    true identity is anything but ordinary. Unbeknownst to him, he is the descendant of the legendary
+                    martial artist Jin Tae-Jin, who is also known as the Jade Emperor.
+                </p>
+                <p class="scroll-item">
+                    <b>The God of High School Tournament:</b>
+                    Jin Mori's journey truly begins when he enters "The God of High School" tournament, a competition
+                    that
+                    seeks to determine the strongest high school student in South Korea. As he participates in the
+                    tournament, he quickly gains attention for his exceptional martial arts skills, particularly in
+                    Renewal
+                    Taekwondo.
+                </p>
+                <p class="scroll-item">
+                    <b>Revelations and Monkey King's Power:</b>
+                    As the series progresses, it is revealed that Jin Mori is the host for the powerful being known as
+                    the
+                    Monkey King. The Monkey King lends him extraordinary abilities, including the power to summon the
+                    Ruyi
+                    Jingu Bang, a magical staff associated with Chinese mythology.
+                </p>
+                <p class="scroll-item">
+                    <b>Charyeok and Charyeok Borrowing:</b>
+                    Jin Mori's connection with the Monkey King allows him to tap into Charyeok, a power that involves
+                    borrowing strength from divine beings. The Monkey King's influence enhances Mori's combat abilities,
+                    making him a formidable force in the tournament.
+                </p>
+                <p class="scroll-item">
+                    <b>Personal Growth and Challenges:</b>
+                    Throughout the series, Jin Mori faces numerous challenges, both in the tournament and in his
+                    personal
+                    life. He encounters powerful opponents, uncovers the mysteries of his family's past, and experiences
+                    significant character development. His journey is not just about physical strength but also about
+                    self-discovery and understanding his role in the larger supernatural conflicts unfolding in the
+                    story.
+                </p>
+                <p class="scroll-item">
+                    ...
+                </p>
+                <!-- Add more Lorem Ipsum content items as needed -->
+            </div>
+        </div>
+    </div>
+    <script>
+        const contentContainer = document.getElementById('content');
+        let isPaused = false;
+
+        // Function to handle auto-scrolling
+        function autoScroll() {
+            if (!isPaused) {
+                contentContainer.style.transform = 'translateY(-100%)';
+            }
+        }
+
+        // Start auto-scroll on hover
+        document.getElementById('scrollSection').addEventListener('mouseenter', function () {
+            isPaused = false;
+            autoScroll();
+        });
+
+        // Pause auto-scroll on click
+        document.getElementById('scrollSection').addEventListener('click', function () {
+            isPaused = !isPaused;
+        });
+
+        // Reset scroll position on mouse leave
+        document.getElementById('scrollSection').addEventListener('mouseleave', function () {
+            contentContainer.style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+
+</html>

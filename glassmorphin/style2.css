@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    font-family: RAMEN ICHIKARU;
+    margin: 0;
+    box-sizing: border-box;
+    max-height: 100vh;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(mori.jpg);
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page {
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 241, 42, 0.377);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 89%;
+    padding: 10px 0px 20px 20px;
+    height: 89%;
+    border-radius: 7px;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #f1f1f1;
+    cursor: default;
+}
+
+li a:hover {
+    color: rgb(248, 236, 213);
+    margin-left: 10px;
+    transition: all 0.4s linear;
+
+}
+
+.nav {
+    position: fixed;
+    height: 100%;
+    width: 100px;
+    right: 15px;
+    line-height: 70px;
+    align-items: center;
+    display: flex;
+
+}
+
+.mori {
+    box-sizing: border-box;
+    height: 300px;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.title {
+    margin-left: 20px;
+    width: 370px;
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.page .title h5 {
+    font-size: 14px;
+    margin-left: 275px;
+}
+
+.page .title h1 {
+    font-size: 50px;
+}
+
+.stats {
+    line-height: 35px;
+    margin-left: 50px;
+    width: 380px;
+}
+
+body {
+    overflow: hidden;
+}
+
+#scrollSection {
+    left: 300px;
+    height: 600px;
+    width: 500px;
+    overflow-y: hidden;
+    background-color: #f0f0f000;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    transition: transform 20s ease-in;
+    transition: transform 0.s ease-out;
+}
+
+.scroll-item {
+    cursor:none;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: Caveat;
+}
+
+.scroll-item b {
+    font-family: RAMEN ICHIKARU;
+
+    color: #a34803;
+}
