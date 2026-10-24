@@ -1,0 +1,101 @@
+import { TrioMember, LegendProfile } from '../types';
+
+export const TRIO_MEMBERS: TrioMember[] = [
+  {
+    id: 'mori',
+    name: 'Jin Mori',
+    epithet: 'The Supreme God & Jecheondaeseong',
+    martialArt: 'Renewal Taekwondo & Recoilless Stance',
+    borrowedPower: 'None (Direct Divine Godhood)',
+    signatureTechnique: 'Recoilless Kick & Blue Dragon Kick',
+    description: 'The reincarnated Monkey King who entered the God of High School tournament as an energetic high schooler. Through boundless battles against humans, gods, and cosmic entities, he achieved Nirvana and absolute enlightenment.',
+    image: '/assets/morr.png',
+    quote: 'I do what I want. That’s what Grandpa’s Renewal Taekwondo is about!',
+    stats: {
+      strength: 'Infinite (∞)',
+      speed: 'Faster than Light (FTL+)',
+      technique: 'Transcendent Mastery',
+    },
+  },
+  {
+    id: 'daewi',
+    name: 'Han Daewi',
+    epithet: 'The Sage of the East & Successor to the Jade Emperor',
+    martialArt: 'Full Contact Kyokushin Karate',
+    borrowedPower: 'Haetae (Unicorn Aquatic Guardian) & Jade Emperor Wisdom',
+    signatureTechnique: 'Dance of the Four Guardian Gods & Gravitational Force',
+    description: 'Jin Mori’s most loyal brother-in-arms. Bearing the Wisdom of the Sage, he commands the four fundamental universal forces: gravity, electromagnetism, strong nuclear, and weak nuclear forces.',
+    image: '/assets/daewi.png',
+    quote: 'Mori... we promised to stand together till the very end.',
+    stats: {
+      strength: 'Universal Scale',
+      speed: 'Sub-Relativistic',
+      technique: 'Fundamental Force Master',
+    },
+  },
+  {
+    id: 'mira',
+    name: 'Yoo Mira',
+    epithet: 'The Witch of the West & 25th Moon Light Master',
+    martialArt: 'Moon Light Sword Style (Wolgwang)',
+    borrowedPower: 'Lu Bu Fengxian & Jade Emperor Physical Body',
+    signatureTechnique: 'Fallen Blossom Slash & Jade Emperor Blades',
+    description: 'The fiercely proud swordswoman carrying the legacy of the Yoo family. Empowered with the physical body of the Jade Emperor and National Treasure blades, she stands as one of the deadliest blade masters in the cosmos.',
+    image: '/assets/mira.png',
+    quote: 'My sword carries the will of my ancestors and the future of my friends.',
+    stats: {
+      strength: 'Mountain-Cleaving',
+      speed: 'Supersonic Flash',
+      technique: 'Sword Saint',
+    },
+  },
+];
+
+export const UNIVERSE_LEGENDS: LegendProfile[] = [
+  {
+    name: 'Jin Taejin',
+    title: 'The God of Martial Arts',
+    affiliation: 'Humanity / Adoptive Grandfather',
+    description: 'Created Renewal Taekwondo to surpass Northern ITF. Defeated the entire Six simultaneously and bruised the gods using pure human martial arts without ever borrowing power.',
+    quote: 'Win, lose, or draw — as long as you fought freely, you were true to Renewal Taekwondo.',
+    badge: 'Human Peak',
+  },
+  {
+    name: 'Park Mujin (Mubong)',
+    title: 'Commissioner & Maitreya',
+    affiliation: 'GOH Executive / World President',
+    description: 'Orchestrated the GOH tournament to assemble warriors against the gods. Driven by ideological zeal, he merged with Tathagata to remake humanity in his image.',
+    quote: 'Humanity will no longer bow to gods. Even if I must become the devil to achieve it.',
+    badge: 'Supreme Antagonist',
+  },
+  {
+    name: 'Na Bong-Chim',
+    title: 'The Divine Acupuncturist',
+    affiliation: 'The Six',
+    description: 'Master of Nabong Needle Ryu. Discovered the deadly limiter removal techniques that allow a fighter to multiply their speed and power up to hundreds of thousands of times.',
+    quote: 'The human body has infinite locks. I merely unlock the gates.',
+    badge: 'The Six',
+  },
+  {
+    name: 'Park Il-Pyo',
+    title: 'The Nine-Tailed Fox Guardian',
+    affiliation: 'Ssamsu Taekkyeon / The Six Successor',
+    description: 'Master of ancient Taekkyeon martial arts and key holder for the Divine Nine-Tails Hojosa. Brilliant tactician and lifelong ally of Jin Mori.',
+    quote: 'A true martial artist bends like the willow before shattering the storm.',
+    badge: 'Key Guardian',
+  },
+  {
+    name: 'Tathagata',
+    title: 'The Ancient Supreme God',
+    affiliation: 'First Heavenly Realm',
+    description: 'The primordial deity of the universe whose malevolent spirit and blade slumbered until awakened to initiate cosmic Ragnarök.',
+    badge: 'Cosmic Threat',
+  },
+  {
+    name: 'Satan 666',
+    title: 'Lord of the First Heavenly Realm',
+    affiliation: 'Heavenly Realm Monarch',
+    description: 'The supreme winged monarch of heaven who duplicates any technique simply by observing it. Clashed against Mori Jin in one of the most destructive clashes across the solar system.',
+    badge: 'Heavenly King',
+  },
+];
