@@ -75,20 +75,20 @@ export const StorySection: React.FC = () => {
                 <div>
                   <div className="flex items-center gap-2 text-xs text-[#f8ecd5] font-semibold mb-1">
                     <Calendar className="w-3.5 h-3.5 text-[#ffe75e]" />
-                    <span>{arc.badge}</span>
+                    <span>{selectedArc.badge}</span>
                     <span>•</span>
-                    <span className="text-[#ffe75e]">{arc.period}</span>
+                    <span className="text-[#ffe75e]">{selectedArc.period}</span>
                   </div>
                   <h3 className="font-manga text-2xl md:text-4xl text-[#ffe75e] text-shadow-manga">
-                    {arc.title}
+                    {selectedArc.title}
                   </h3>
                   <p className="font-brush text-sm md:text-base text-[#f8ecd5] mt-0.5">
-                    {arc.subtitle}
+                    {selectedArc.subtitle}
                   </p>
                 </div>
 
                 <p className="text-xs md:text-sm text-stone-100 leading-relaxed bg-black/40 p-3.5 rounded border border-white/10">
-                  {arc.summary}
+                  {selectedArc.summary}
                 </p>
 
                 {/* Climax Callout */}
@@ -97,13 +97,13 @@ export const StorySection: React.FC = () => {
                     <Swords className="w-4 h-4" />
                     <span>Saga Climax:</span>
                   </div>
-                  <p className="text-[#f1f1f1] mt-1 font-medium">{arc.climax}</p>
+                  <p className="text-[#f1f1f1] mt-1 font-medium">{selectedArc.climax}</p>
                 </div>
 
                 {/* Quote */}
                 <div className="p-2.5 rounded bg-black/60 border border-[#ffe75e]/40 text-[#ffe75e] text-xs md:text-sm italic flex items-start gap-2">
                   <Quote className="w-4 h-4 shrink-0 mt-0.5 text-[#ffe75e]" />
-                  <span>"{arc.quote}"</span>
+                  <span>"{selectedArc.quote}"</span>
                 </div>
               </div>
 
@@ -116,7 +116,7 @@ export const StorySection: React.FC = () => {
                   </div>
 
                   <ul className="space-y-2">
-                    {arc.keyEvents.map((event, idx) => (
+                    {selectedArc.keyEvents.map((event: string, idx: number) => (
                       <li
                         key={idx}
                         className="flex items-start gap-2 text-xs text-stone-200 bg-white/5 p-2 rounded hover:bg-white/10 transition-colors"
