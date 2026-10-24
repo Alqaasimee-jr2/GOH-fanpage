@@ -1,45 +1,35 @@
-# Design Specification: God of High School (GOH) Cinematic Fan Page (Lore-Enriched Edition)
+# Design Specification: The Ultimate God of High School (GOH) Universe Fan Page
 
 **Date**: 2026-10-24  
-**Status**: Revised with Deep Lore & Character Research  
+**Status**: Revised with Full Universe Scope, Canonical Color Lock & Manga Typography  
 **Target Repository**: `Alqaasimee-jr2/GOH-fanpage`  
 
 ---
 
-## 1. Project Overview & Lore-Driven Vision
+## 1. Vision & Core Requirements
 
-The goal is to rebuild the *God of High School (GOH)* fan page into a world-class, cinematic manhwa fan experience using **React 19**, **TypeScript**, **Vite**, **Tailwind CSS**, and **Framer Motion**.
+This specification transforms the repository into **The Ultimate God of High School (GOH) Universe Fan Page**, honoring Yongje Park's masterpiece in full scope while strictly preserving the visual identity, colors, and manga spirit of the original repository.
 
-Based on deep research into Yongje Park's 11-year epic manhwa, the application will incorporate the full canonical depth of **Jin Mori**, his legendary weapons, martial arts techniques, the **Legendary Trio**, and the overarching cosmic war.
-
-### Core Lore & Interactive Pillars
-1. **Dynamic Character Form Switcher**:
-   - **Mortal Mori Jin**: The Renewal Taekwondo prodigy, high school contender, high-agility martial artist with azure/cyan aura.
-   - **Awakened Jecheondaeseong (Monkey King)**: The celestial victor with the Loop of Binding, Fiery Eyes & Golden Pupils, golden flaming aura.
-   - **Dan Mori & Nirvana Buddha**: Bonus lore states detailing the Recoilless Taekwondo era and cosmic Supreme God ascension.
-2. **Divine Arsenal & Combat Techniques**:
-   - **Yeoui (Ruyi Jingu Bang)**: Size/weight manipulation, reaching orbit, 19 Dragon Kings infusion.
-   - **Yongpyo (Dragon Armor)**: Sentient armor by Hephaestus, Speed/Power modes.
-   - **Geundoowun (Kinto-Un)**: Weather control and lightning strikes.
-   - **Martial Arts**: Recoilless Renewal Taekwondo (3-Stage Hoechook, Blue Dragon Kick, Bo-Bup) and Nabong Needle Ryu (Limiter Removal up to 250,000x).
-3. **The Legendary Trio & Allies**:
-   - **Jin Mori**: Jecheondaeseong / Supreme God.
-   - **Han Daewi**: Successor to the Jade Emperor, master of Kyokushin Karate, ruler of fundamental forces (Gravity, Electromagnetism).
-   - **Yoo Mira**: 25th Master of Moonlight Sword Style, Jade Emperor physical successor, the Sword Saint.
-   - **Grandpa Jin Taejin**: The legendary creator of Renewal Taekwondo who defied the gods with pure human martial arts.
-   - **Dan Ahan & Uma**: Sister & Sworn Brother bonds.
-4. **Cinematic 5-Stage Story Timeline**:
-   - *Phase 1*: The Seoul GOH Tournament & Charyeok awakening.
-   - *Phase 2*: The Sage Realm & Monkey King Rebirth.
-   - *Phase 3*: Ragnarök — The Heavenly War & Jin Taejin's sacrifice.
-   - *Phase 4*: Dan Mori & The 17-Year Timeskip.
-   - *Phase 5*: The Final Nirvana Battle against Maitreya Park Mujin & Tathagata.
-5. **Interactive Memorial & Tribute**:
-   - Memorial to Master Jin Taejin and his guiding motto: *"Do what you want, that's what Renewal Taekwondo is about."*
-   - Tribute to author **Yongje Park** and community credits.
-6. **Ambient Audio & Glassmorphic Visuals**:
-   - Continuous ambient audio controller with animated soundwaves and zero-crash Web Audio synthesis fallback.
-   - Responsive dark glassmorphism with dynamic glowing borders matching active forms.
+### Key Mandates
+1. **Full GOH Universe Scope**:
+   - Central Protagonist: **Jin Mori** (Mortal High Schooler $\leftrightarrow$ Awakened Sun Wukong / Jecheondaeseong $\leftrightarrow$ Dan Mori $\leftrightarrow$ Nirvana Supreme God).
+   - **The Legendary Trio**: Jin Mori, Han Daewi (Jade Emperor Wisdom & Kyokushin Karate), and Yoo Mira (Moonlight Sword Master & Witch of the West).
+   - **Martial Arts vs Charyeok (Borrowed Power)**: Complete dossier on Renewal Taekwondo, Kyokushin Karate, Moonlight Sword, Nabong Needle Clinic vs Gods' Charyeok (Haetae, Lu Bu, Tam, Longinus).
+   - **Divine Weapons & Relics**: Yeoui (Ruyi Jingu Bang), Yongpyo (Dragon Armor), Geundoowun (Kinto-Un), Sage's Cane, and The Gourd.
+   - **Cosmic Antagonists & The Six**: Park Mujin / Maitreya, Tathagata, Satan 666, Okhwang (Jade Emperor), and The Six masters.
+   - **Chronicles of the Universe**: 5-Stage interactive story timeline spanning the entire 570+ chapters.
+2. **Strict Color Fidelity (No Deviation from Repo)**:
+   - Primary Glassmorphic Fill: `rgba(230, 160, 10, 0.4)` to `rgba(255, 174, 0, 0.7)` (warm amber / golden orange).
+   - Accent Borders: `#ffe75e` / `#f1f1f1` (warm gold / frosted white 3px borders).
+   - Deep Accent Text & Badges: `rgb(226, 98, 13)` (burnt orange-amber).
+   - Warm Text Highlights: `rgb(248, 236, 213)` (cream parchment gold) & pure white `#ffffff`.
+   - Backdrop: `url(mori.jpg); filter: blur(4px);` with dark atmospheric overlay.
+3. **Authentic Manga Style Typography**:
+   - Header & Manga Burst Fonts: **Shojumaru**, **Bangers**, and **Permanent Marker** (action manhwa brush lettering).
+   - Body Text: **Outfit** / **Inter** with stylized letter spacing, comic badges, and manhwa callout boxes.
+4. **Targeted Image Generation**:
+   - Preserve and feature all existing assets (`mori.jpg`, `morr.png`, `sun.png`, `chibi.png`, `jin.png`, `team2.png`, `GOH.png`, `logo.png`).
+   - Use the `image-generator` subagent to generate authentic manhwa-style companion artwork for **Han Daewi**, **Yoo Mira**, and **Yeoui Divine Staff** to make the roster visually complete.
 
 ---
 
@@ -47,57 +37,61 @@ Based on deep research into Yongje Park's 11-year epic manhwa, the application w
 
 - **Framework**: React 19 (`react`, `react-dom`)
 - **Language**: TypeScript (`.tsx`, `.ts`)
-- **Build System**: Vite 6+ (`@vitejs/plugin-react`)
-- **Styling**: Tailwind CSS with custom glass utilities, animated gradient overlays, and aura glows
-- **Animation**: `framer-motion` for smooth layout transitions, stat morphing, floating character art, and card flips
+- **Build Tool**: Vite 6+
+- **Styling**: Tailwind CSS with custom repo glass colors (`bg-goh-glass`, `border-goh-gold`, `text-goh-amber`)
+- **Animation**: `framer-motion` for character aura flares, stat bar morphing, and card transitions
 - **Icons**: `lucide-react`
-- **Typography**:
-  - Headings: Google Fonts **Shojumaru** / **Permanent Marker** (action/manga display typography)
-  - Body & UI: Google Fonts **Outfit** / **Inter** (clean modern high-contrast sans-serif)
+- **Typography Integration**: Google Fonts (`Shojumaru`, `Bangers`, `Permanent Marker`, `Outfit`)
 
-### Directory Structure
+### Project Directory Layout
 ```
 c:\Users\DELL\Downloads\FAN-PAGE\
 ├── public/
 │   ├── assets/
-│   │   ├── mori.jpg           # Background artwork
-│   │   ├── morr.png           # Mori Jin character cutout
-│   │   ├── sun.png            # Sun Wukong divine mode cutout
-│   │   ├── chibi.png          # Chibi Mori illustration
-│   │   ├── jin.png            # Master Jin Taejin artwork
-│   │   ├── team2.png          # GOH squad artwork
-│   │   ├── GOH.png            # God of High School logo
-│   │   └── logo.png           # Accent crest
+│   │   ├── mori.jpg           # Background artwork (original)
+│   │   ├── morr.png           # Mori Jin character cutout (original)
+│   │   ├── sun.png            # Sun Wukong divine mode cutout (original)
+│   │   ├── chibi.png          # Chibi Mori illustration (original)
+│   │   ├── jin.png            # Master Jin Taejin artwork (original)
+│   │   ├── team2.png          # GOH squad artwork (original)
+│   │   ├── GOH.png            # God of High School logo (original)
+│   │   ├── logo.png           # Accent crest (original)
+│   │   ├── daewi.png          # Han Daewi artwork (generated)
+│   │   ├── mira.png           # Yoo Mira artwork (generated)
+│   │   └── yeoui.png          # Yeoui divine staff artwork (generated)
 │   ├── favicon.ico
 │   └── audio/
+│       └── ambient.mp3
 ├── src/
 │   ├── components/
 │   │   ├── layout/
-│   │   │   ├── GlassNavbar.tsx       # Floating glass dock with nav links & audio control
-│   │   │   ├── SectionIndicator.tsx  # Vertical right-side dot navigation
+│   │   │   ├── GlassNavbar.tsx       # Amber-tinted glass dock with nav links & audio control
+│   │   │   ├── SectionIndicator.tsx  # Vertical right-side golden dot navigation
 │   │   │   └── AudioPlayer.tsx       # Ambient audio toggle with animated equalizer wave
 │   │   ├── sections/
-│   │   │   ├── HeroSection.tsx       # Overview, mode toggle, titles, badges, artwork
-│   │   │   ├── CharacterSection.tsx  # Dynamic stat comparison & relationship spotlight
-│   │   │   ├── ArsenalSection.tsx    # Yeoui, Yongpyo, Geundoowun, & Martial Arts
-│   │   │   ├── StorySection.tsx      # Interactive manhwa arc timeline
-│   │   │   └── TributeSection.tsx    # Master Jin memorial, creator note, author credits
+│   │   │   ├── HeroSection.tsx       # Universe Overview, Mori mode toggle, titles, badges
+│   │   │   ├── TrioSection.tsx       # The Legendary Trio (Mori, Daewi, Mira) & The Six
+│   │   │   ├── CombatSection.tsx     # Animated Combat Stats, Martial Arts vs Charyeok
+│   │   │   ├── ArsenalSection.tsx    # Divine Weapons (Yeoui, Yongpyo, Geundoowun, Gourd)
+│   │   │   ├── StorySection.tsx      # 5-Arc Manhwa Chronicle & Epic Battles
+│   │   │   └── TributeSection.tsx    # Master Jin memorial, Yongje Park tribute, fan credits
 │   │   └── ui/
-│   │       ├── GlassCard.tsx         # Reusable glassmorphic panel with dynamic glow
-│   │       ├── StatBar.tsx           # Animated progress bar with custom metrics
-│   │       ├── ModeToggle.tsx        # Dual-state switch button
-│   │       └── TechniqueModal.tsx    # Detailed technique breakdown
+│   │       ├── GlassCard.tsx         # Signature repo glass panel (rgba(230,160,10,0.4), #ffe75e)
+│   │       ├── StatBar.tsx           # Golden animated progress bar
+│   │       ├── ModeToggle.tsx        # Mori Jin vs Sun Wukong dual-state switch
+│   │       └── MangaBadge.tsx        # Comic burst badge component
 │   ├── context/
-│   │   └── CharacterModeContext.tsx  # Form mode state ('mori' | 'wukong')
+│   │   └── CharacterModeContext.tsx  # Mode state ('mori' | 'wukong') with golden aura presets
 │   ├── data/
-│   │   ├── characterData.ts          # Stats, facts, forms, relationships
-│   │   ├── arsenalData.ts            # Weapons, armor, martial arts moves
-│   │   └── storyData.ts              # Timeline arcs, key quotes, enemies
+│   │   ├── universeData.ts           # Overview, The Trio, The Six, Gods & Antagonists
+│   │   ├── combatData.ts             # Stats, Renewal Taekwondo, Charyeok powers
+│   │   ├── arsenalData.ts            # Divine relics, weapon specs
+│   │   └── storyData.ts              # 5 major saga arcs, quotes, battles
 │   ├── types/
-│   │   └── index.ts                  # TypeScript interfaces
-│   ├── App.tsx                       # Main layout & section container
-│   ├── index.css                     # Tailwind imports, custom glassmorphism & aura classes
-│   └── main.tsx                      # Entrypoint
+│   │   └── index.ts                  # TypeScript models
+│   ├── App.tsx                       # Main snap layout & section orchestrator
+│   ├── index.css                     # Tailwind setup, repo colors, glassmorphic filters
+│   └── main.tsx
 ├── docs/
 │   └── superpowers/
 │       └── specs/
@@ -106,127 +100,89 @@ c:\Users\DELL\Downloads\FAN-PAGE\
 ├── package.json
 ├── tailwind.config.js
 ├── tsconfig.json
-├── tsconfig.node.json
 └── vite.config.ts
 ```
 
 ---
 
-## 3. Data Models & State Architecture
+## 3. Strict Color Palette Definition
 
-### TypeScript Interfaces (`src/types/index.ts`)
-```typescript
-export type CharacterMode = 'mori' | 'wukong';
+All components must draw from this exact palette matching `glassmorphin/style*.css`:
 
-export interface StatMetric {
-  name: string;
-  moriValue: number;
-  moriDisplay: string;
-  wukongValue: number;
-  wukongDisplay: string;
-  description: string;
-}
-
-export interface DivineWeapon {
-  id: string;
-  name: string;
-  alias: string;
-  creatorOrOrigin: string;
-  description: string;
-  abilities: string[];
-  icon: string;
-}
-
-export interface MartialArtTechnique {
-  name: string;
-  style: 'Renewal Taekwondo' | 'Recoilless' | 'Nabong Needle Ryu' | 'Divine Power';
-  description: string;
-  signatureMove: string;
-}
-
-export interface TrioMember {
-  name: string;
-  epithet: string;
-  style: string;
-  borrowedPower: string;
-  description: string;
-  role: string;
-}
-
-export interface Relationship {
-  name: string;
-  relation: string;
-  description: string;
-  quote?: string;
-  badge?: string;
-}
-
-export interface StoryArc {
-  id: string;
-  title: string;
-  subtitle: string;
-  badge: string;
-  description: string;
-  climax: string;
-  keyMoments: string[];
-}
-```
+| Token | Hex / RGBA | Role in Fan Page |
+|---|---|---|
+| `goh-glass-base` | `rgba(230, 160, 10, 0.40)` | Primary container glass surface |
+| `goh-glass-intense` | `rgba(255, 174, 0, 0.70)` | Active card & highlight panel surface |
+| `goh-glass-subtle` | `rgba(255, 241, 42, 0.35)` | Nested cards & badges |
+| `goh-border-gold` | `#ffe75e` | 3px primary golden border |
+| `goh-border-white` | `#f1f1f1` | 3px frosted white border |
+| `goh-amber` | `rgb(226, 98, 13)` (`#e2620d`) | Action titles, badges, and accents |
+| `goh-cream` | `rgb(248, 236, 213)` (`#f8ecd5`) | Hover states and subtitles |
+| `goh-white` | `#ffffff` / `#f1f1f1` | Crisp high-contrast body text |
+| `goh-bg-blur` | `blur(4px)` over `mori.jpg` | Canonical backdrop styling |
 
 ---
 
-## 4. Section Breakdown
+## 4. Full Universe Sections Specification
 
-### 4.1 Hero Section (`HeroSection.tsx` - `#overview`)
-- **Title**: Dynamic Manga Brush display ("JIN MORI" / "SUN WUKONG" / "JECHEONDAESEONG").
-- **Subtitles**: "Supreme God of the Universe • Master of Renewal Taekwondo • Reincarnation of the Monkey King".
-- **Artwork**: Centered high-resolution cutout (`morr.png` / `sun.png`) with animated breathing/floating physics and aura glow.
-- **Form Switcher**: Toggle button with instant reactive palette change (Cyan Azure $\leftrightarrow$ Solar Gold).
-- **Badges**: "Dragon Slayer", "Child of Gaia", "Bearer of the Loop of Binding", "Billion-Level Power".
+### 4.1 Universe & Hero Stage (`#overview`)
+- **Backdrop**: Classic `mori.jpg` with `blur(4px)` and amber vignette overlay.
+- **Title**: Action Manga Typography: **THE GOD OF HIGH SCHOOL** / **SUN WUKONG • JIN MORI**.
+- **Interactive Form Switcher**:
+  - *Mortal Mori*: High School Renewal Taekwondo contender, human stats, amber/gold glow.
+  - *Awakened Sun Wukong*: The Great Sage Heaven's Equal, blazing solar aura, infinity metrics.
+- **Universe Tagline**: *"From a high school street brawl to the clash of Gods and Nirvana — The Battle for the Cosmos."*
+- **Quick Links**: Jump to Trio, Martial Arts, Divine Arsenal, Story Chronicles, and Tribute.
 
-### 4.2 Character, Trio & Combat Stats (`CharacterSection.tsx` - `#character`)
-- **Sub-Tab 1: Combat Stats**:
-  - Animated stat bars comparing Mortal Mori vs Divine Monkey King:
-    - *Strength*: 8/10 $\rightarrow$ $\infty$ (Infinite)
-    - *Speed*: 9/10 $\rightarrow$ 999+ (Faster than Light)
-    - *Battle IQ*: 7/10 $\rightarrow$ 600 (Master Tactician & Technique Mimicry)
-    - *Endurance*: 8/10 $\rightarrow$ $\infty$ (Immortal Celestial Body)
-    - *Luck*: 4/10 $\rightarrow$ 500
-- **Sub-Tab 2: The Legendary Trio**:
-  - **Jin Mori**: Renewal Taekwondo & Monkey King.
-  - **Han Daewi**: Successor to the Jade Emperor, Master of Kyokushin Karate and the Four Fundamental Forces.
-  - **Yoo Mira**: Witch of the West, 25th Master of Moonlight Sword Style, Jade Emperor physical heir.
-- **Sub-Tab 3: Relationships**:
-  - Grandpa Jin Taejin, Dan Ahan, Park Taejin, and Uma with lore backstories.
+### 4.2 The Legendary Trio & Universe Legends (`#trio`)
+- **The Main Trio**:
+  1. **Jin Mori**: The Supreme God / Monkey King. Renewal Taekwondo & divine gear.
+  2. **Han Daewi**: Successor to the Jade Emperor. Kyokushin Karate & Four Fundamental Universal Forces (Gravity, Electromagnetism, Strong/Weak nuclear forces).
+  3. **Yoo Mira**: 25th Master of Moonlight Sword Style, Witch of the West, Jade Emperor physical heir.
+- **The Six & Mentors**:
+  - Master **Jin Taejin** (Creator of Renewal Taekwondo).
+  - Park Mujin, Kim Doo-Sik, Na Bong-Chim (Acupuncture God), Seo Han-Ryang, Jeon Jae-San, Park Il-Pyo (Nine-Tails Guardian).
+- **The Gods & Antagonists**:
+  - Tathagata, Satan 666, Okhwang (Jade Emperor), Ultio R, Taek Jegal.
 
-### 4.3 Divine Arsenal & Secret Arts (`ArsenalSection.tsx` - `#arsenal`)
-- **The Divine Relics**:
-  - **Yeoui (Ruyi Jingu Bang)**: Expanding pillar of infinite mass, 19 Dragon Kings.
-  - **Yongpyo (Sentient Dragon Armor)**: Speed/Power transformations crafted by Hephaestus.
-  - **Geundoowun (Nimbus Cloud)**: Atmospheric weather control and thunder strike summons.
-  - **The Gourd & Loop of Binding**: Celestial seals and power limiters.
-- **Martial Arts Dossier**:
+### 4.3 Combat Systems: Martial Arts vs Charyeok (`#combat`)
+- **Animated Combat Stats**:
+  - Dynamic comparison bars for Strength, Speed, Battle IQ, Endurance, and Luck.
+  - Morphs in real-time when switching between Mori Jin (Mortal) and Sun Wukong (Divine).
+- **Genuine Martial Arts**:
   - *Renewal Taekwondo*: 3-Stage Hoechook, Blue Dragon Kick, Dragon Catcher, Bo-Bup.
-  - *Recoilless Taekwondo*: Removing excess motion to produce unstoppable kinetic strikes.
-  - *Nabong Needle Ryu*: Limiter Removal (2x, 8x, 250,000x) and Pain Blockade.
+  - *Recoilless Taekwondo*: Eliminating kinetic waste for devastating cosmic impact.
+  - *Nabong Needle Ryu*: Limiter Removal (2x to 250,000x multiplier), Blood Sealing.
+  - *Moonlight Sword Style*: Yoo Family secret lethal swordsmanship.
+  - *Kyokushin Karate & Four Guardian Gods*: Dance of the Four Gods.
+- **Borrowed Power (Charyeok)**:
+  - Explanation of contracts between humans and gods, Taboo removal, Haetae, Lu Bu, Tam, Longinus.
 
-### 4.4 Story Arcs Timeline (`StorySection.tsx` - `#story`)
-- **Arc 1: The Seoul GOH Tournament**: High school brawls, Charyeok revelation, Taek Jegal climax.
-- **Arc 2: The Sage Realm**: Reclaiming memories, unsealing Yeoui from the moon, Monkey King rebirth.
-- **Arc 3: Ragnarök**: The Heavenly War, clash against the First Heavenly Realm, Jin Taejin's sacrifice.
-- **Arc 4: The Dan Mori Era**: 17-year timeskip, powerless underdog, mastering Recoilless Taekwondo.
-- **Arc 5: Nirvana & The Supreme God**: The final battle against Maitreya Mujin Park and Tathagata, cosmic universal peace.
+### 4.4 Divine Arsenal & Relics (`#arsenal`)
+- **Interactive Relic Cards**:
+  1. **Yeoui (Ruyi Jingu Bang)**: Mental command size/weight manipulation, planetary reach, 19 Dragon Kings infusion.
+  2. **Yongpyo (Dragon Armor)**: Sentient armor by Hephaestus, Speed and Power modes, impervious durability.
+  3. **Geundoowun (Nimbus Cloud)**: Weather command, supercharged divine thunderbolts.
+  4. **The Gourd & Loop of Binding**: Entity sealing and power stabilization.
 
-### 4.5 Memorial & Tribute (`TributeSection.tsx` - `#tribute`)
-- **Master Jin Taejin Memorial**: Highlighting `jin.png` and the philosophy of Renewal Taekwondo.
-- **Yongje Park Tribute**: Honoring the author's 11-year serialization and 570+ chapters.
-- **Squad Showcase**: Featuring `team2.png`, `GOH.png`, and `logo.png`.
-- **Fan Community Footer**: Original author email (`qaasimkids6@gmail.com`), GitHub link, and share button.
+### 4.5 The 5-Stage Story Chronicle (`#story`)
+- **Stage 1: The Seoul GOH Tournament**: The battle for the wish, meeting Daewi & Mira, defeating Taek Jegal, Charyeok awakening.
+- **Stage 2: The Sage Realm**: Journey to the realm of monsters, recovering Monkey King memories, unsealing Yeoui from the Moon.
+- **Stage 3: Ragnarök (The Heavenly War)**: The invasion of the Gods, Jin Taejin's heroic sacrifice, Mori clashing against the First Heavenly Realm.
+- **Stage 4: The 17-Year Timeskip & Dan Mori**: The weakened underdog, adopting Dan Ahan, mastering Recoilless Taekwondo.
+- **Stage 5: Nirvana & Cosmic Climax**: The final clash against Maitreya Park Mujin and Tathagata, ascending to the ultimate Buddha.
+
+### 4.6 Memorial, Creator Tribute & Community (`#tribute`)
+- **Master Jin Taejin Memorial**: Dedicated homage with `jin.png` artwork and his immortal words: *"Do what you want, that's what Renewal Taekwondo is about."*
+- **Yongje Park Tribute**: Honoring 11 years of non-stop action manhwa storytelling.
+- **Artwork Gallery**: Showcasing `team2.png`, `chibi.png`, `GOH.png`, and `logo.png`.
+- **Fan Credits & Contact**: Original author contact (`qaasimkids6@gmail.com`), GitHub repository link, and share button.
 
 ---
 
 ## 5. Verification Plan
 
-1. **Vite TypeScript Compilation**: `npx tsc --noEmit` exits with 0 errors.
-2. **Production Bundle**: `npm run build` generates optimized assets in `dist/`.
-3. **Asset Migration Verification**: All images from `glassmorphin/` accessible in `public/assets/`.
-4. **Interactive Feature Validation**: Form switcher, arsenal modals, stat morphing, and audio controls tested and fully responsive.
+1. **Color Conformance Check**: Verify that all glass surfaces, borders, and text accents strictly implement `rgba(230, 160, 10, 0.4)`, `#ffe75e`, `#f1f1f1`, `rgb(226, 98, 13)`, and `rgb(248, 236, 213)`.
+2. **TypeScript & Build Check**: `npx tsc --noEmit` and `npm run build` execute cleanly with zero errors.
+3. **Manga Typography Check**: Confirm Google Fonts `Shojumaru`, `Bangers`, and `Permanent Marker` render with authentic manhwa display impact.
+4. **Interactive Validation**: Mode switcher, audio controls, stat morphing, and all universe sections tested and responsive across mobile, tablet, and widescreen.
