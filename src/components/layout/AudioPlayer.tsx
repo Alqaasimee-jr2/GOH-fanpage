@@ -75,7 +75,7 @@ export const AudioPlayer: React.FC = () => {
   return (
     <button
       onClick={toggleAudio}
-      className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 border border-[#f1f1f1] hover:border-[#ffe75e] text-[#f8ecd5] hover:text-white transition-all duration-300 shadow-md group"
+      className="flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-[#f1f1f1] hover:border-[#ffe75e] text-[#f8ecd5] hover:text-white transition-all duration-300 drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)] cursor-pointer group"
       title={isPlaying ? 'Mute Theme Sound' : 'Play Theme Sound'}
       aria-label="Toggle Theme Sound"
     >

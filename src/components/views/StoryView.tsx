@@ -18,8 +18,7 @@ export const StoryView: React.FC = () => {
       lastTime = now;
 
       if (!isPaused && container) {
-        container.scrollTop += (delta * 0.035); // Smooth cinematic crawl
-        // Loop back to top if reached end
+        container.scrollTop += (delta * 0.035);
         if (container.scrollTop + container.clientHeight >= container.scrollHeight - 5) {
           container.scrollTop = 0;
         }
@@ -73,26 +72,26 @@ export const StoryView: React.FC = () => {
   return (
     <div className="relative w-full h-full p-4 md:p-8 pr-12 md:pr-32 flex flex-col items-center">
       
-      {/* Top Header with GOH Logo & Controls */}
-      <div className="w-full max-w-2xl flex items-center justify-between border-b border-white/20 pb-2 mb-4 shrink-0">
+      {/* Top Header with GOH Logo & Controls (No background box) */}
+      <div className="w-full max-w-2xl flex items-center justify-between border-b-2 border-white/20 pb-3 mb-4 shrink-0">
         <img
           src="/assets/GOH.png"
           alt="The God of High School"
-          className="h-10 sm:h-12 object-contain drop-shadow-md"
+          className="h-10 sm:h-12 object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]"
         />
 
         <div className="flex items-center gap-2">
           <button
             onClick={() => setIsPaused(!isPaused)}
-            className="flex items-center gap-1.5 px-3 py-1 rounded bg-black/60 border border-[#f1f1f1] hover:border-[#ffe75e] text-xs font-manga text-[#f8ecd5] transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1 rounded-full border-2 border-[#f1f1f1] hover:border-[#ffe75e] text-xs font-manga text-[#f8ecd5] hover:text-white transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] cursor-pointer"
           >
-            {isPaused ? <Play className="w-3.5 h-3.5 text-[#ffe75e]" /> : <Pause className="w-3.5 h-3.5 text-stone-300" />}
-            <span>{isPaused ? 'RESUME SCROLL' : 'PAUSE'}</span>
+            {isPaused ? <Play className="w-3.5 h-3.5 text-[#ffe75e]" /> : <Pause className="w-3.5 h-3.5 text-white" />}
+            <span className="drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)]">{isPaused ? 'RESUME SCROLL' : 'PAUSE'}</span>
           </button>
 
           <button
             onClick={resetScroll}
-            className="p-1.5 rounded bg-black/60 border border-[#f1f1f1] hover:border-[#ffe75e] text-stone-300 hover:text-white transition-colors"
+            className="p-1.5 rounded-full border-2 border-[#f1f1f1] hover:border-[#ffe75e] text-white transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] cursor-pointer"
             title="Reset to Top"
           >
             <RotateCcw className="w-3.5 h-3.5" />
@@ -100,26 +99,26 @@ export const StoryView: React.FC = () => {
         </div>
       </div>
 
-      {/* Narrative Auto-Scroll Box */}
+      {/* Narrative Auto-Scroll Box — No artificial dark card background, pure depth with shadows */}
       <div
         ref={scrollContainerRef}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
-        className="w-full max-w-2xl flex-1 overflow-y-auto pr-3 bg-black/40 backdrop-blur-sm p-6 rounded-[7px] border border-white/20 shadow-xl scrollbar-thin space-y-5"
+        className="w-full max-w-2xl flex-1 overflow-y-auto pr-4 scrollbar-thin space-y-6"
       >
         {storySections.map((sec, idx) => (
-          <div key={idx} className="space-y-1 text-xs sm:text-sm md:text-base leading-relaxed text-[#f1f1f1]">
+          <div key={idx} className="space-y-1.5 text-sm sm:text-base leading-relaxed text-white drop-shadow-[1px_2px_3px_rgba(0,0,0,0.95)]">
             {sec.title && (
-              <h3 className="font-manga text-[#ffe75e] text-sm sm:text-base tracking-wide">
+              <h3 className="font-manga text-[#ffe75e] text-base sm:text-lg tracking-wide drop-shadow-[1px_2px_4px_rgba(0,0,0,0.95)]">
                 {sec.title}
               </h3>
             )}
-            <p className="font-normal text-stone-200">{sec.content}</p>
+            <p className="font-normal text-[#f1f1f1] leading-relaxed">{sec.content}</p>
           </div>
         ))}
       </div>
 
-      <div className="text-[11px] text-stone-300 mt-2 italic text-center">
+      <div className="text-xs text-white/90 drop-shadow-[1px_1px_2px_rgba(0,0,0,0.95)] mt-3 italic text-center shrink-0">
         Hover to pause reading • Scroll freely with wheel or touch
       </div>
 

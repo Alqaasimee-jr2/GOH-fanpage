@@ -66,9 +66,9 @@ export const App: React.FC = () => {
                 <li key={item.id} className="list-none">
                   <button
                     onClick={() => setCurrentTab(item.id)}
-                    className={`font-manga text-sm sm:text-base md:text-lg lowercase tracking-wider transition-all duration-300 transform block cursor-pointer select-none ${
+                    className={`font-manga text-sm sm:text-base md:text-lg lowercase tracking-wider transition-all duration-300 transform block cursor-pointer select-none drop-shadow-[1px_2px_4px_rgba(0,0,0,0.9)] ${
                       isActive
-                        ? 'text-[#ffe75e] font-extrabold translate-x-2 drop-shadow-[0_0_8px_rgba(255,231,94,0.8)]'
+                        ? 'text-[#ffe75e] font-extrabold translate-x-2 drop-shadow-[0_0_10px_rgba(255,231,94,0.9)]'
                         : 'text-[#f1f1f1] hover:text-[#f8ecd5] hover:translate-x-2'
                     }`}
                   >
